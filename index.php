@@ -12,24 +12,21 @@
     </div>
     <div class="container">
       <div class="row">
-        <p>This program will calculate your body mass index and
-           indicate what your range is.</p>
-      </div>
-      <div class="row">
-        <div class="col-sm-3 col-md-6">
-        <form action="bmi.php" method="post">
-          <div class="form-group">
-            <label for="height">Height (inches)</label>
-            <input type="text" id="height" name="height" class="form-control" placeholder="Enter height" />
-          </div>
-          <div class="form-group">
-            <label for="height">Weight (pounds)</label>
-            <input type="text" id="weight" name="weight" class="form-control" placeholder="Enter weight" />
-          </div>
-          <div class="form-group">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-        </form>
+        <div class="col-lg-6 offset-3">
+          <p>This program will calculate your body mass index and indicate what your range is.</p>
+          <form action="bmi.php" method="post">
+            <div class="form-group">
+              <label for="height">Height (inches)</label>
+              <input type="text" id="height" name="height" class="form-control" placeholder="Enter height" />
+            </div>
+            <div class="form-group">
+              <label for="height">Weight (pounds)</label>
+              <input type="text" id="weight" name="weight" class="form-control" placeholder="Enter weight" />
+            </div>
+            <div class="form-group">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
