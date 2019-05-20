@@ -7,7 +7,7 @@
   </head>
   <body>
     <div class="jumbotron">
-      <div class="col-lg-6 offset-3">
+      <div class="col-lg-8 offset-2">
         <h1 class="display-4">PHP BMI Calculator</h1>
         <p class="lead">Calculate your body mass index</p>
         <hr class="my-4">
@@ -16,7 +16,7 @@
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 offset-3">
+        <div class="col-lg-8 offset-2">
           <p>This program will calculate your body mass index and indicate what your range is.</p>
           <form action="bmi.php" method="post">
             <div class="form-group">
