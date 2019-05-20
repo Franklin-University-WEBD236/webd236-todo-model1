@@ -6,9 +6,13 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o" crossorigin="anonymous"></script>
   </head>
   <body>
-    <div class="jumbotron text-center">
-      <h1>BMI Calculator</h1>
-      <p><em>Author: <a href="https://www.franklin.edu/about-us/faculty-staff/faculty-profiles/whittakt">Todd Whittaker</a></em></p>
+    <div class="jumbotron">
+      <div class="col-lg-6 offset-3">
+        <h1 class="display-4">PHP BMI Calculator</h1>
+        <p class="lead">Calculate your body mass index</p>
+        <hr class="my-4">
+        <p><em>Author: <a href="https://www.franklin.edu/about-us/faculty-staff/faculty-profiles/whittakt">Todd Whittaker</a></em></p>
+      </div>
     </div>
     <div class="container">
       <div class="row">
