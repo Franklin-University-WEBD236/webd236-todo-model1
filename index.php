@@ -19,7 +19,7 @@
       <div class="row">
         <div class="col-lg-8 offset-2">
           <p>This program will calculate your body mass index and indicate what your range is.</p>
-          <form action="bmi.php" method="post">
+          <form action="bmi.php" method="get">
             <div class="form-group">
               <label for="height">Height (inches)</label>
               <input type="number" min="1" id="height" name="height" class="form-control" placeholder="Enter height" />
