@@ -13,7 +13,7 @@
           <h1 class="display-4">PHP BMI Calculator</h1>
           <p class="lead">Calculate your body mass index</p>
           <p><em>Author: <a href="https://www.franklin.edu/about-us/faculty-staff/faculty-profiles/whittakt">Todd Whittaker</a></em></p>
-          <hr class="my-4">
+          <hr>
         </div>
       </div>
       <div class="row">
