@@ -57,7 +57,7 @@ $bmiCategory = categoryFor($bmi);
           <h2>Results</h2>
           <p>With a height of <?php echo $height ?>
           inches and a weight of <?php echo $weight ?>
-          pounds, your BMI is <?php echo number_format($bmi,2) ?>
+          pounds, your BMI is <?php echo number_format($bmi, 2) ?>
           which is <?php echo $bmiCategory ?>.</p>
           <p><a href="/">Return to BMI Calculator</a></p>
         </div>
