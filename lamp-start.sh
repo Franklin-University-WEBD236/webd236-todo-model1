@@ -5,4 +5,4 @@ truncate -s 0 .apache2/log/*
 .apache2/run-apache2.sh &
 
 tail -f -v .apache2/log/*
-#wait
+#wait 
