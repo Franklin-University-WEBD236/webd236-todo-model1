@@ -1,6 +1,8 @@
 <?php
   include('parts/header.php');
   include_once('parts/utils.php');
+  include_once('parts/db.php');
+
   $first_name = safeParam("first_name", "");
   $last_name = safeParam("last_name", "");
 ?>
@@ -16,7 +18,7 @@
       <div class="row">
         <div class="col-lg-8 offset-2">
           <p>Which student do you want to find?</p>
-          <form action="index.php" method="get">
+          <form action="index.php" method="post">
             <div class="form-group">
               <label for="first_name">First name</label>
               <input type="text" min="1" id="first_name" name="first_name" class="form-control" placeholder="Enter first name" value="<?php echo $first_name?>"/>
@@ -31,4 +33,16 @@
           </form>
         </div>
       </div>
+<?php
+  if ($last_name || $first_name) {
+    echo '<div class="row"><div class="col-lg-8 offset-2">';
+    $rows = findStudentByName($last_name, $first_name);
+    echo "<table><tr><th>First</th><th>Last</th></tr>\n";
+    foreach ($rows as $row) {
+      echo "<tr><td>{$row['STU_FNAME']}</td><td><a href=\"view_student.php?id={$row['STU_NUM']}\">{$row['STU_LNAME']}</a></td></tr>\n";
+    }
+    echo "</table>";
+    echo "</div></div>";
+  }
+?>
 <?php include('parts/footer.php');
