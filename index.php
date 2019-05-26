@@ -48,11 +48,10 @@
           <tbody>
 <?php foreach ($rows as $row): ?>
   <tr>
-    <td>
-      <?php echo 
-      echo "<tr><td>{$row['STU_FNAME']}</td><td><a href=\"view.php?id={$row['STU_NUM']}\">{$row['STU_LNAME']}</a></td></tr>\n";
-    }
-?>
+    <td><?php echo "{$row['STU_FNAME']}" ?></td>
+    <td><?php echo "<a href=\"view.php?id={$row['STU_NUM']}\">{$row['STU_LNAME']}</a>" ?></td>
+  </tr>
+<?php endforeach; ?>
           </tbody>
         </table>
       </div>
