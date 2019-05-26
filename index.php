@@ -35,13 +35,16 @@
       </div>
 <?php
   if ($last_name || $first_name) {
-    echo '<div class="row"><div class="col-lg-8 offset-2">';
+>?
+<div class="row">
+  <div class="col-lg-6 offset-3">
+  
     $rows = findStudentByName($last_name, $first_name);
-    echo "<table><tr><th>First</th><th>Last</th></tr>\n";
+    echo "<table class=\"table table-striped\"><thead class=\"thead-dark\"><tr><th>First</th><th>Last</th></tr></thead><tbody>\n";
     foreach ($rows as $row) {
       echo "<tr><td>{$row['STU_FNAME']}</td><td><a href=\"view_student.php?id={$row['STU_NUM']}\">{$row['STU_LNAME']}</a></td></tr>\n";
     }
-    echo "</table>";
+    echo "</tbody></table>";
     echo "</div></div>";
   }
 ?>
