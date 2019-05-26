@@ -33,19 +33,30 @@
           </form>
         </div>
       </div>
-<?php
-  if ($last_name || $first_name) {
->?
-<div class="row">
-  <div class="col-lg-6 offset-3">
-  
-    $rows = findStudentByName($last_name, $first_name);
-    echo "<table class=\"table table-striped\"><thead class=\"thead-dark\"><tr><th>First</th><th>Last</th></tr></thead><tbody>\n";
-    foreach ($rows as $row) {
-      echo "<tr><td>{$row['STU_FNAME']}</td><td><a href=\"view_student.php?id={$row['STU_NUM']}\">{$row['STU_LNAME']}</a></td></tr>\n";
-    }
-    echo "</tbody></table>";
-    echo "</div></div>";
-  }
+<?php if ($last_name || $first_name):
+  $rows = findStudentByName($last_name, $first_name);
 ?>
-<?php include('parts/footer.php');
+      <div class="row">
+        <div class="col-lg-6 offset-3">
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th>First</th>
+              <th>Last</th>
+            </tr>
+          </thead>
+          <tbody>
+<?php foreach ($rows as $row): ?>
+  <tr>
+    <td>
+      <?php echo 
+      echo "<tr><td>{$row['STU_FNAME']}</td><td><a href=\"view.php?id={$row['STU_NUM']}\">{$row['STU_LNAME']}</a></td></tr>\n";
+    }
+?>
+          </tbody>
+        </table>
+      </div>
+    </div>
+<?php endif; ?>
+  
+<?php include('parts/footer.php'); ?>
