@@ -43,6 +43,7 @@
             <tr>
               <th>First</th>
               <th>Last</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -50,6 +51,7 @@
   <tr>
     <td><?php echo "{$row['STU_FNAME']}" ?></td>
     <td><?php echo "<a href=\"view.php?id={$row['STU_NUM']}\">{$row['STU_LNAME']}</a>" ?></td>
+    <td><i class="material-icons">visibility</i> <i class="material-icons">mode_edit</i> <i class="material-icons">delete</i></td>
   </tr>
 <?php endforeach; ?>
           </tbody>
