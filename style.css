@@ -19,3 +19,6 @@ footer {
 icon-links {
   color: rgba(255, 255, 255, 0.89);
 }
+.btn-space {
+    margin-right: 5px;
+}

@@ -43,9 +43,11 @@
   <tr>
     <td><?php echo "{$row['STU_FNAME']}, {$row['STU_LNAME']}" ?></td>
     <td>
-      <button class="btn btn-secondary d-flex justify-content-center align-content-between" (click)="refresh()" [disabled]="loading"><span class="material-icons">visibility</span> View</button>
-      <button class="btn btn-secondary d-flex justify-content-center align-content-between" (click)="refresh()" [disabled]="loading"><span class="material-icons">mode_edit</span> Edit</button>
-      <button class="btn btn-secondary d-flex justify-content-center align-content-between" (click)="refresh()" [disabled]="loading"><span class="material-icons">delete</span> Delete</button>
+      <div class="btn-toolbar">
+        <button class="btn btn-secondary d-flex justify-content-center align-content-between mr-1" (click)="refresh()" [disabled]="loading"><span class="material-icons">visibility</span>&nbsp;View</button>
+        <button class="btn btn-secondary d-flex justify-content-center align-content-between btn-space" (click)="refresh()" [disabled]="loading"><span class="material-icons">mode_edit</span>&nbsp; Edit</button>
+        <button class="btn btn-secondary d-flex justify-content-center align-content-between btn-space" (click)="refresh()" [disabled]="loading"><span class="material-icons">delete</span>&nbsp;Delete</button>
+      </div>
     </td>
   </tr>
 <?php endforeach; ?>
