@@ -30,7 +30,7 @@
     if ($rows) :
 ?>
       <div class="row">
-        <div class="col-lg-6 offset-3">
+        <div class="col-lg-8 offset-2">
         <table class="table table-striped">
           <thead class="thead-dark">
             <tr>
@@ -42,13 +42,22 @@
 <?php foreach ($rows as $row): ?>
   <tr>
     <td><?php echo "{$row['STU_FNAME']}, {$row['STU_LNAME']}" ?></td>
-    <td><a href="#"><i class="material-icons">visibility</i></a> <a href="#"><i class="material-icons">mode_edit</i></a> <a href="#"><i class="material-icons">delete</i></a></td>
+    <td><a href="#"><i class="material-icons">visibility</i></a> <a href="#"><i class="material-icons icon-links">mode_edit</i></a> <a href="#"><i class="material-icons">delete</i></a></td>
   </tr>
 <?php endforeach; ?>
           </tbody>
         </table>
       </div>
     </div>
-<?php endif; ?>
+<?php else: ?>
+      <div class="row">
+        <div class="col-lg-8 offset-2">
+          <p>No results found</p>
+        </div>
+      </div>
+<?php
+    endif;
+  endif;
+?>
   
 <?php include('parts/footer.php'); ?>
