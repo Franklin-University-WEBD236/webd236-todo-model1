@@ -41,17 +41,15 @@
         <table class="table table-striped">
           <thead class="thead-dark">
             <tr>
-              <th>First</th>
-              <th>Last</th>
-              <th>Actions</th>
+              <th>Name</th>
+              <th></th>
             </tr>
           </thead>
           <tbody>
 <?php foreach ($rows as $row): ?>
   <tr>
-    <td><?php echo "{$row['STU_FNAME']}" ?></td>
-    <td><?php echo "<a href=\"view.php?id={$row['STU_NUM']}\">{$row['STU_LNAME']}</a>" ?></td>
-    <td><i class="material-icons">visibility</i> <i class="material-icons">mode_edit</i> <i class="material-icons">delete</i></td>
+    <td><?php echo "{$row['STU_FNAME']}, {$row['STU_LNAME']}" ?></td>
+    <td><a href="#"><i class="material-icons">visibility</i></a> <a href="#"><i class="material-icons">mode_edit</i></a> <a href="#"><i class="material-icons">delete</i></a></td>
   </tr>
 <?php endforeach; ?>
           </tbody>
