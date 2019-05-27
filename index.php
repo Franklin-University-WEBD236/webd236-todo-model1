@@ -42,7 +42,11 @@
 <?php foreach ($rows as $row): ?>
   <tr>
     <td><?php echo "{$row['STU_FNAME']}, {$row['STU_LNAME']}" ?></td>
-    <td><button><span class="material-icons">delete</span> Delete</button><a href="#"><i class="material-icons">visibility</i></a> <a href="#"><i class="material-icons icon-links">mode_edit</i></a> <a href="#"><i class="material-icons">delete</i></a></td>
+    <td>
+      <button class="btn btn-secondary d-flex justify-content-center align-content-between" (click)="refresh()" [disabled]="loading"><span class="material-icons">visibility</span> View</button>
+      <button class="btn btn-secondary d-flex justify-content-center align-content-between" (click)="refresh()" [disabled]="loading"><span class="material-icons">mode_edit</span> Edit</button>
+      <button class="btn btn-secondary d-flex justify-content-center align-content-between" (click)="refresh()" [disabled]="loading"><span class="material-icons">delete</span> Delete</button>
+    </td>
   </tr>
 <?php endforeach; ?>
           </tbody>
