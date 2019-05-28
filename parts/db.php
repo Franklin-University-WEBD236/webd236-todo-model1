@@ -3,9 +3,7 @@ global $db;
 try {
     $db = new PDO('sqlite:MicroUniversity.db3');
 } catch (PDOException $e) {
-    include 'error.inc';
     die("Database error: $e");
-    exit();
 }
 
 function findStudentById($id) {
