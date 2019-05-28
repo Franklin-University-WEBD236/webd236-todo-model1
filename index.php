@@ -6,6 +6,8 @@
 
   $logger = Logger::instance();
   $logger->debug("Here's a debugging message");
+  $logger->debug(array("pi" => 3.14159, "e" => 2.71828));
+
   $first_name = safeParam("first_name", "");
   $last_name = safeParam("last_name", "");
 ?>
