@@ -1,13 +1,7 @@
 $( document ).ready(function() {
-  $(document).on('click', '.view-btn', function () {
-    console.log( "Clicked view!" );
-    console.log( $(this).attr('stu_num') );
-    console.log( $(this).attr('action') );
-  });
-  $(document).on('click', '.edit-btn', function () {
-    console.log( "Clicked edit!" );
-  });
-  $(document).on('click', '.del-btn', function () {
-    console.log( "Clicked delete!" );
+  $(document).on('click', '.addclickhandler', function () {
+    $('#studentform').attr('action', $(this).attr('action'));
+    $('input[name="stu_num"]').val( $(this).attr('stu_num') );
+
   });
 });

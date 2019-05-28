@@ -44,9 +44,9 @@
     <td><?php echo "{$row['STU_FNAME']}, {$row['STU_LNAME']}" ?></td>
     <td>
       <div class="btn-toolbar">
-        <button class="btn btn-secondary d-flex justify-content-center align-content-between mr-1 view-btn" action="view.php" stu_num="<?php echo "{$row['STU_NUM']}"?>"><span class="material-icons">visibility</span>&nbsp;View</button>
-        <button class="btn btn-secondary d-flex justify-content-center align-content-between mr-1 edit-btn"><span class="material-icons">mode_edit</span>&nbsp; Edit</button>
-        <button class="btn btn-secondary d-flex justify-content-center align-content-between del-btn"><span class="material-icons">delete</span>&nbsp;Delete</button>
+        <button class="btn btn-secondary d-flex justify-content-center align-content-between mr-1 addclickhandler" action="view.php" stu_num="<?php echo "{$row['STU_NUM']}"?>"><span class="material-icons">visibility</span>&nbsp;View</button>
+        <button class="btn btn-secondary d-flex justify-content-center align-content-between mr-1 addclickhandler" action="edit.php" stu_num="<?php echo "{$row['STU_NUM']}"?>"><span class="material-icons">mode_edit</span>&nbsp; Edit</button>
+        <button class="btn btn-secondary d-flex justify-content-center align-content-between addclickhandler" action="delete.php" stu_num="<?php echo "{$row['STU_NUM']}"?>"><span class="material-icons">delete</span>&nbsp;Delete</button>
       </div>
     </td>
   </tr>
@@ -66,8 +66,7 @@
   endif;
 ?>
 <form action="replaceme" method="post" id="studentform">
-  <input type="hidden" id="action" name="action" value="">
-  <input type="hidden" id="stu_id" name="stu_id" value="">
+  <input type="hidden" id="stu_num" name="stu_num" value="">
 </form>
   
 <?php include('parts/footer.php'); ?>
