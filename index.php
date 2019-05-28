@@ -2,6 +2,9 @@
   include('parts/header.php');
   include_once('parts/utils.php');
   include_once('parts/db.php');
+  include_once('parts/Logger.php');
+
+  $logger = Logger::instance();
 
   $first_name = safeParam("first_name", "");
   $last_name = safeParam("last_name", "");
