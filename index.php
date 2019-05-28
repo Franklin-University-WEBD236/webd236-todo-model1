@@ -25,9 +25,10 @@
           </form>
         </div>
       </div>
-<?php if ($last_name || $first_name):
-  $rows = findStudentByName($last_name, $first_name);
-    if ($rows) :
+<?php
+  if ($last_name || $first_name):
+    $rows = findStudentByName($last_name, $first_name);
+      if ($rows):
 ?>
       <div class="row">
         <div class="col-lg-8 offset-2">

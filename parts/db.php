@@ -4,7 +4,7 @@ try {
     $db = new PDO('sqlite:MicroUniversity.db3');
 } catch (PDOException $e) {
     include 'error.inc';
-    errorPage("Database error", $e);
+    die("Database error: $e");
     exit();
 }
 

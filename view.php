@@ -6,7 +6,6 @@
   $student = findStudentById($stu_num);
   $advisor = findEmployeeById($student['EMP_NUM']);
 
-
   function makeTextInput($arr, $fieldname, $label, $disabled="disabled") {
     echo "<div class=\"form-group\">\n";
     echo "<label for=\"{$fieldname}\">{$label}</label>\n";
