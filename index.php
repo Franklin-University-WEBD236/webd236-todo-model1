@@ -44,7 +44,7 @@
     <td><?php echo "{$row['STU_FNAME']}, {$row['STU_LNAME']}" ?></td>
     <td>
       <div class="btn-toolbar">
-        <button class="btn btn-secondary d-flex justify-content-center align-content-between mr-1 view-btn"><span class="material-icons">visibility</span>&nbsp;View</button>
+        <button class="btn btn-secondary d-flex justify-content-center align-content-between mr-1 view-btn" action="view.php" stu_num="<?php echo "{$row['STU_NUM']}"?>"><span class="material-icons">visibility</span>&nbsp;View</button>
         <button class="btn btn-secondary d-flex justify-content-center align-content-between mr-1 edit-btn"><span class="material-icons">mode_edit</span>&nbsp; Edit</button>
         <button class="btn btn-secondary d-flex justify-content-center align-content-between del-btn"><span class="material-icons">delete</span>&nbsp;Delete</button>
       </div>
