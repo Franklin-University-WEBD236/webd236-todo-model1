@@ -46,6 +46,7 @@
           </thead>
           <tbody>
 <?php foreach ($rows as $row): ?>
+  <?php $logger->debug("found student {$row['STU_FNAME']}, {$row['STU_LNAME']}"); ?>
   <tr>
     <td><?php echo "{$row['STU_FNAME']}, {$row['STU_LNAME']}" ?></td>
     <td>

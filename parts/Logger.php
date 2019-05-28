@@ -50,7 +50,10 @@
     if (!is_string($message)) {
       $message = print_r($message, true);
     }
-    fprintf($fd, "%s %s %s\r\n", $timestamp, $names[$level], $message);
+    foreach(preg_split("/((\r?\n)|(\r\n?))/", $message) as $line) {
+      fprintf($fd, "%s %s %s\r\n", $timestamp, $names[$level], $line);
+    } 
+    //fprintf($fd, "%s %s %s\r\n", $timestamp, $names[$level], $message);
     fclose($fd);
   }
 }
