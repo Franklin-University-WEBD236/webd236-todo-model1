@@ -1,5 +1,6 @@
 <?php
-  class Logger {
+
+class Logger {
   private static $instance;
   private $filename;
 
@@ -23,14 +24,6 @@
     return $this -> log(self::DEBUG, $message);
   }
 
-  public function setLevel($level) {
-    $this -> level = $level;
-  }
-
-  public function setFilename($filename) {
-    $this -> filename = $filename;
-  }
-
   public function info($message) {
     return $this -> log(self::INFO, $message);
   }
@@ -52,8 +45,7 @@
     }
     foreach(preg_split("/((\r?\n)|(\r\n?))/", $message) as $line) {
       fprintf($fd, "%s %s %s\r\n", $timestamp, $names[$level], $line);
-    } 
-    //fprintf($fd, "%s %s %s\r\n", $timestamp, $names[$level], $message);
+    }
     fclose($fd);
   }
 }
