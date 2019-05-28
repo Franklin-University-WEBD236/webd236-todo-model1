@@ -1,4 +1,5 @@
-class Logger {
+<?php
+  class Logger {
   private static $instance;
   private $filename;
 
@@ -7,7 +8,7 @@ class Logger {
   const WARN = 2;
   const ERROR = 3;
 
-  private function __construct($filename=) {
+  private function __construct($filename) {
     $this->filename = $filename;
   }
 
@@ -46,10 +47,12 @@ class Logger {
     $names = array('DEBUG', 'INFO', 'WARN', 'ERROR');
     $timestamp = date("Y-m-d H:i:s", time());
     $fd = fopen($this -> filename, "a");
+    if (!is_string($message)) {
+      $message = print_r($message, true);
+    }
     fprintf($fd, "%s %s %s\r\n", $timestamp, $names[$level], $message);
     fclose($fd);
   }
 }
 
-
-
+?>

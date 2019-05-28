@@ -5,7 +5,7 @@
   include_once('parts/Logger.php');
 
   $logger = Logger::instance();
-
+  $logger->debug("Here's a debugging message");
   $first_name = safeParam("first_name", "");
   $last_name = safeParam("last_name", "");
 ?>
@@ -32,6 +32,7 @@
   if ($last_name || $first_name):
     $rows = findStudentByName($last_name, $first_name);
     // could use findStudentByName2 or findStudentByName3
+    $logger->debug($rows);
       if ($rows):
 ?>
       <div class="row">
