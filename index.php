@@ -65,5 +65,9 @@
     endif;
   endif;
 ?>
+<form action="replaceme" method="post" id="studentform">
+  <input type="hidden" id="action" name="action" value="">
+  <input type="hidden" id="stu_id" name="stu_id" value="">
+</form>
   
 <?php include('parts/footer.php'); ?>
