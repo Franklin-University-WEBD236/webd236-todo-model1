@@ -36,6 +36,14 @@ function findAllStudents($limit = 0, $offset = 0) {
     return $st -> fetchAll(PDO::FETCH_ASSOC);
 }
 
+function findEmployeeById($id) {
+    global $db;
+    $st = $db -> prepare('SELECT * FROM EMPLOYEE WHERE EMP_NUM = ?');
+    $st -> bindParam(1, $id);
+    $st -> execute();
+    return $st -> fetch(PDO::FETCH_ASSOC);
+}
+
 function adHocQuery($q) {
     global $db;
     $st = $db -> prepare($q);
