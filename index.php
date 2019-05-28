@@ -27,7 +27,7 @@
       </div>
 <?php
   if ($last_name || $first_name):
-    $rows = findStudentByName($last_name, $first_name);
+    $rows = findStudentByName3($last_name, $first_name);
       if ($rows):
 ?>
       <div class="row">
