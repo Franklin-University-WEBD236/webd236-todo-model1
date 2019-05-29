@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 
 truncate -s 0 .apache2/log/*
 #.mysql/run-mysqld.sh &
