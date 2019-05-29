@@ -35,7 +35,7 @@
     $rows = findStudentByName($last_name, $first_name);
     // could use findStudentByName2 or findStudentByName3
     $logger->debug($rows);
-      if ($rows):
+    if ($rows):
 ?>
       <div class="row">
         <div class="col-lg-8 offset-2">
@@ -50,7 +50,7 @@
 <?php foreach ($rows as $row): ?>
   <?php $logger->debug("found student {$row['STU_FNAME']}, {$row['STU_LNAME']}"); ?>
   <tr>
-    <td><?php echo "{$row['STU_FNAME']}, {$row['STU_LNAME']}" ?></td>
+    <td><?php echo "{$row['STU_LNAME']}, {$row['STU_FNAME']}" ?></td>
     <td>
       <div class="btn-toolbar">
         <button class="btn btn-secondary d-flex justify-content-center align-content-between mr-1 addclickhandler" action="view.php" stu_num="<?php echo "{$row['STU_NUM']}"?>"><span class="material-icons">visibility</span>&nbsp;View</button>
