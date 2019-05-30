@@ -30,6 +30,7 @@
   makeTextInput($student, "STU_PHONE", "Phone number");
 ?>
           </form>
+    <p>Advisor: <?php echo "{$advisor['EMP_LNAME']}, {$advisor['EMP_FNAME']}"; ?></p>
     <a href="."><< Back</a>
         </div>
       </div>
