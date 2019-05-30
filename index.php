@@ -76,6 +76,8 @@
 ?>
 <form action="replaceme" method="post" id="studentform">
   <input type="hidden" id="stu_num" name="stu_num" value="">
+  <input type="hidden" name="first_name_holder" value="<?php echo $first_name ?>">
+  <input type="hidden" name="last_name_holder" value="<?php echo $last_name ?>">
 </form>
   
 <?php include('parts/footer.php'); ?>
