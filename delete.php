@@ -15,7 +15,9 @@
   $last_name = safeParam('last_name_holder', "");
                           
   $result = deleteStudentById($stu_num);
-
+  if (!$result) {
+    echo "no such student id found.";
+  }
   header("Location: index.php?first_name=$first_name&last_name=$last_name");
   
 ?>
