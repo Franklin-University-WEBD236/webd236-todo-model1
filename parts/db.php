@@ -18,7 +18,7 @@ function findStudentByName($lname, $fname) {
     global $db;
     $lname = "%{$lname}%";
     $fname = "%{$fname}%";
-    $st = $db -> prepare('SELECT * FROM STUDENT WHERE STU_LNAME LIKE ? AND STU_FNAME LIKE ? ORDER BY STU_LNAME, STU_FNAME');
+    $st = $db -> prepare('SELECT * FROM STUDENT WHERE STU_LNAME LIKE ? AND STU_FNAME LIKE ? ORDER BY STU_LNAME, STU_FNAME ASC');
     $st -> bindParam(1, $lname);
     $st -> bindParam(2, $fname);
     $st -> execute();
