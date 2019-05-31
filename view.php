@@ -2,6 +2,8 @@
   include_once('parts/utils.php');
   include_once('parts/db.php');
   $stu_num = safeParam("stu_num", "");
+  $first_name = safeParam('first_name_holder', "");
+  $last_name = safeParam('last_name_holder', "");
 
   $student = findStudentById($stu_num);
   $advisor = findEmployeeById($student['EMP_NUM']);
@@ -31,7 +33,7 @@
 ?>
           </form>
     <p>Advisor: <?php echo "{$advisor['EMP_LNAME']}, {$advisor['EMP_FNAME']}"; ?></p>
-    <a href="."><< Back</a>
+    <a href="index.php?first_name=<?php echo $first_name; ?>&last_name=<?php echo $last_name; ?>"><< Back</a>
         </div>
       </div>
 <?php include('parts/footer.php'); ?>
