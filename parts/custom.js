@@ -1,3 +1,6 @@
+/**
+ *
+ */
 $( document ).ready(function() {
   $(document).on('click', '.addclickhandler', function () {
     $('#studentform').attr('action', $(this).attr('action'));
