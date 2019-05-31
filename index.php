@@ -75,7 +75,9 @@
     endif;
   endif;
 ?>
-<form action="replaceme" method="post" id="studentform">
+<!-- see the "custom.js" file for how this form gets modified by JavaScript
+     using custom attributes on the buttons in the table -->
+<form action="this_is_replaced_by_javascript" method="post" id="studentform">
   <input type="hidden" id="stu_num" name="stu_num" value="">
   <input type="hidden" name="first_name_holder" value="<?php echo $first_name ?>">
   <input type="hidden" name="last_name_holder" value="<?php echo $last_name ?>">
