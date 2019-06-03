@@ -16,8 +16,8 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 offset-2">
-          <h1 class="display-4">MicroUniversity Database</h1>
-          <p class="lead">Find a student</p>
+          <h1 class="display-4">Model 1 ToDo application</h1>
+          <p class="lead">Add </p>
           <p><em>Author: <a href="https://www.franklin.edu/about-us/faculty-staff/faculty-profiles/whittakt">Todd Whittaker</a></em></p>
           <hr>
         </div>
