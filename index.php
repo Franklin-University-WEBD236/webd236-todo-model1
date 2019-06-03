@@ -2,12 +2,6 @@
   include('parts/header.php');
   include_once('parts/utils.php');
   include_once('parts/db.php');
-  include_once('parts/Logger.php');
-
-  $logger = Logger::instance();
-  $logger->debug("Here's a debugging message");
-  $logger->debug(array("pi" => 3.14159, "e" => 2.71828, "i" => "SQRT(-1)"));
-  $logger->debug(array(2, 3, 5, 7, 11, array("pi" => 3.14159, "e" => 2.71828, "i" => "SQRT(-1)")));
 
   $first_name = safeParam("first_name", "");
   $last_name = safeParam("last_name", "");

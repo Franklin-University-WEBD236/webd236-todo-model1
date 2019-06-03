@@ -1,6 +1,6 @@
-# WEBD 236 MicroUniversity database
+# WEBD 236 ToDo app, Model 1 architecture
 
 Goals are:
-  - Work with databases and PDO
-  - Simple workflow for queries
+  - Demostrate a simple model 1 architecture
   - Work with SQLite
+  - Lay the groundwork for model 2 architectures
