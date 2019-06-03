@@ -3,21 +3,22 @@
   include_once('parts/utils.php');
   include_once('parts/db.php');
 
-  $first_name = safeParam("first_name", "");
-  $last_name = safeParam("last_name", "");
+  $description = safeParam("description", "");
+
+  if ($description) {
+    addToDo($description);
+  }
+
+  $rows = findCurrentToDos();
 ?>
   
       <div class="row">
         <div class="col-lg-8 offset-2">
-          <p>Which student do you want to find?</p>
+          <p>Add a new thing to do</p>
           <form action="index.php" method="post">
             <div class="form-group">
-              <label for="first_name">First name</label>
-              <input type="text" min="1" id="first_name" name="first_name" class="form-control" placeholder="Enter first name" value="<?php echo $first_name?>"/>
-            </div>
-            <div class="form-group">
-              <label for="last_name">Last name</label>
-              <input type="text" min="1" id="last_name" name="last_name" class="form-control" placeholder="Enter last name" value="<?php echo $last_name?>"/>
+              <label for="description">Description</label>
+              <input type="text" min="1" id="description" name="description" class="form-control" placeholder="Enter discription" value=""/>
             </div>
             <div class="form-group">
               <button type="submit" class="btn btn-primary">Submit</button>
@@ -34,6 +35,7 @@
 ?>
       <div class="row">
         <div class="col-lg-8 offset-2">
+          
         <table class="table table-striped">
           <thead class="thead-dark">
             <tr>

@@ -17,7 +17,7 @@
       <div class="row">
         <div class="col-lg-8 offset-2">
           <h1 class="display-4">Model 1 ToDo application</h1>
-          <p class="lead">Add </p>
+          <p class="lead">Keep track of things that you need to do.</p>
           <p><em>Author: <a href="https://www.franklin.edu/about-us/faculty-staff/faculty-profiles/whittakt">Todd Whittaker</a></em></p>
           <hr>
         </div>
