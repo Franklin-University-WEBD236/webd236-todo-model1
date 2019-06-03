@@ -19,7 +19,7 @@ function findToDos($done) {
   $statement = $db -> prepare("SELECT * FROM todo WHERE done = :done ORDER BY id");
   $statement -> bindParam(":done", $done);
   $statement -> execute();
-  $rows = $statement -> fetchAll(PDO::FETCH_ASSOC);
+  return $statement -> fetchAll(PDO::FETCH_ASSOC);
 }
 
 function findToDoById($id) {
@@ -53,6 +53,7 @@ function deleteToDo($id) {
     $statement -> bindParam(1, $id);
     $statement -> execute();
 }
+
 function adHocQuery($q) {
     global $db;
     $st = $db -> prepare($q);
