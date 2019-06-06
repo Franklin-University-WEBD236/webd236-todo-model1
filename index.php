@@ -40,4 +40,4 @@
 <?php endif; ?>
         </div>
       </div>
-  <?php include('parts/footer.php'); ?>
+<?php include('parts/footer.php'); ?>
